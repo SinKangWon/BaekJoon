@@ -1,4 +1,4 @@
-package BaekJoon.chap1;
+package BaekJoon;
 
 public class BOJ10171 {
     public static void main(String[] args) {

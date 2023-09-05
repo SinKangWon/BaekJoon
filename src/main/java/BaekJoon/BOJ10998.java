@@ -1,4 +1,4 @@
-package BaekJoon.chap1;
+package BaekJoon;
 import java.util.*;
 
 public class BOJ10998 {
