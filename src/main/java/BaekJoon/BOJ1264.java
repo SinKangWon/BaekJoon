@@ -14,8 +14,8 @@ public class BOJ1264 {
             str = str.toLowerCase();
             int gatherCount = 0;
             for (int i = 0; i < str.length(); i++) {
-                char gather = str.charAt(i);
-                if (gather == 'a' || gather == 'e' || gather == 'i' || gather == 'o' || gather == 'u') {
+                char charStr = str.charAt(i);
+                if (charStr == 'a' || charStr == 'e' || charStr == 'i' || charStr == 'o' || charStr == 'u') {
                     gatherCount ++;
                 }
 
