@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.step.level1;
 
 import java.util.*;
 
