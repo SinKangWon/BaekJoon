@@ -1,9 +1,11 @@
 package BaekJoon.step.level4;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BOJ10810 {
+public class BOJ10813 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer = new StringTokenizer(reader.readLine());
@@ -12,26 +14,27 @@ public class BOJ10810 {
         int M = Integer.parseInt(stringTokenizer.nextToken());
         int[] baskets = new int[N];
 
-        for (int t = 0; t < M; t++) {
+        for (int n = 0; n < N; n++) {
+            baskets[n] = n + 1;
+        }
+
+        for (int n = 0; n < M; n++) {
             stringTokenizer = new StringTokenizer(reader.readLine());
+            int bowl = 0;
             int i = Integer.parseInt(stringTokenizer.nextToken()) - 1;
             int j = Integer.parseInt(stringTokenizer.nextToken()) - 1;
-            int k = Integer.parseInt(stringTokenizer.nextToken());
-
-            for (int l = i; l <= j; l++) {
-                baskets[l] = k;
-            }
+            bowl = baskets[i];
+            baskets[i] = baskets[j];
+            baskets[j] = bowl;
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < baskets.length; i++) {
-            stringBuilder.append(baskets[i]);
-            if (i < baskets.length - 1) {
+        for (int n = 0; n < N; n++) {
+            stringBuilder.append(baskets[n]);
+            if (n < N - 1) {
                 stringBuilder.append(" ");
             }
         }
-
         System.out.println(stringBuilder);
-
     }
 }
