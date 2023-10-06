@@ -11,18 +11,8 @@ public class BOJ9086 {
 
         StringBuilder string = new StringBuilder();
         for (int i = 0; i < testCaseQuantity; i++) {
-            String testCase = reader.readLine();
-            char[] testCaseToCharArray = testCase.toUpperCase().toCharArray();
-
-            for (int l = 0; l < testCaseToCharArray.length; l++) {
-                if (testCaseToCharArray.length == 1) {
-                    string.append(testCaseToCharArray[0]).append(testCaseToCharArray[0]).append("\n");
-                } else if (l == 0) {
-                    string.append(testCaseToCharArray[0]);
-                } else if (l == testCaseToCharArray.length - 1) {
-                    string.append(testCaseToCharArray[l]).append("\n");
-                }
-            }
+            String testCaseArray = reader.readLine();
+            string.append(testCaseArray.charAt(0)).append(testCaseArray.charAt(testCaseArray.length() - 1)).append("\n");
         }
         System.out.println(string);
     }
