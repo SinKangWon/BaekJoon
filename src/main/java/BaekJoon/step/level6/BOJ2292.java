@@ -10,19 +10,12 @@ public class BOJ2292 {
         int N = Integer.parseInt(reader.readLine());
         reader.close();
 
-        int result;
-
         int bee = 1;
         int l = 0;
-        while (true){
-
-            if (N <= bee){
-                result = l + 1;
-                break;
-            }
+        while (N <= bee){
                 l = l + 1;
                 bee = bee + 6*l;
         }
-        System.out.println(result);
+        System.out.println(l + 1);
     }
 }
