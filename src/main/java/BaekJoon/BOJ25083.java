@@ -1,4 +1,4 @@
-package BaekJoon.step.level6;
+package BaekJoon;
 
 public class BOJ25083 {
     public static void main(String[] args) {
